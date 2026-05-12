@@ -66,6 +66,142 @@
   .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.5); margin-bottom: 8px; display: block; }
   .footer-contact { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.22); display: block; }
   .footer-contact span { color: #e8437a; }
+  /* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+@media (max-width: 768px) {
+
+  .wrap {
+    padding: 32px 18px 50px;
+  }
+
+  .hero {
+    margin-bottom: 36px;
+  }
+
+  .hero-name {
+    font-size: 52px;
+    line-height: 0.95;
+  }
+
+  .hero-handle {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+
+  .eyebrow {
+    letter-spacing: 3px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .left-line,
+  .right-line {
+    width: 70px;
+  }
+
+  /* Stats */
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    margin-bottom: 32px;
+  }
+
+  .stat {
+    padding: 22px 14px;
+  }
+
+  .stat-number {
+    font-size: 34px;
+  }
+
+  /* Reach Card */
+  .reach-card {
+    padding: 26px 20px;
+    margin-bottom: 40px;
+  }
+
+  .reach-big {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .reach-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  /* Packages */
+  .packages {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .pkg {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 20px;
+    text-align: left;
+  }
+
+  .pkg-price {
+    text-align: left;
+  }
+
+  .pkg-name {
+    font-size: 24px;
+  }
+
+  .pkg-items {
+    gap: 8px;
+  }
+
+  .pkg-items li {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .pkg-amount {
+    font-size: 30px;
+  }
+
+  .featured-badge {
+    top: 10px;
+    right: 10px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  /* Terms */
+  .terms {
+    padding-top: 30px;
+    margin-bottom: 36px;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .term-item {
+    padding: 14px 15px;
+  }
+
+  .term-text {
+    font-size: 11px;
+  }
+
+  /* Footer */
+  .footer-name {
+    font-size: 24px;
+  }
+
+  .footer-contact {
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.7;
+  }
+}
   @media print {
     html, body { background-color: #1a0a12 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     body { background-image: radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,67,122,0.22) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 85% 80%, rgba(212,168,83,0.14) 0%, transparent 55%) !important; }
