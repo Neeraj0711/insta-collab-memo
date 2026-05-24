@@ -6,210 +6,135 @@
 <title>Renu Bisht – Brand Collaboration Charges</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-adjust: exact !important;
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  :root {
-    --rose: #e8437a; --gold: #d4a853; --blush: #f7c5d8; --deep: #1a0a12;
-  }
-  html { background: #1a0a12; }
-  body {
-    background-color: #1a0a12 !important;
-    background-image:
-      radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,67,122,0.22) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 85% 80%, rgba(212,168,83,0.14) 0%, transparent 55%),
-      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(232,67,122,0.07) 0%, transparent 70%) !important;
-    font-family: 'DM Sans', Arial, sans-serif;
-    color: #fff; min-height: 100vh;
-  }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 60px 40px 80px; }
-  .hero { text-align: center; margin-bottom: 56px; }
-  .eyebrow { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #d4a853; margin-bottom: 20px; opacity: 0.9; display: block; }
-  .hero-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 80px; font-weight: 300; line-height: 1; color: #fff; margin-bottom: 8px; }
-  .hero-name em { font-style: italic; color: #f7c5d8; }
-  .hero-handle { font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-bottom: 32px; display: block; }
-  .deco-line { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 40px; }
-  .left-line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #e8437a); }
-  .right-line { width: 120px; height: 1px; background: linear-gradient(90deg, #e8437a, transparent); }
-  .deco-diamond { width: 8px; height: 8px; background: #e8437a; transform: rotate(45deg); flex-shrink: 0; }
-  .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
-  .stat { background-color: rgba(255,255,255,0.05) !important; padding: 28px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06); }
-  .stat:last-child { border-right: none; }
-  .stat-number { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 600; color: #f7c5d8; line-height: 1; margin-bottom: 6px; display: block; }
-  .stat-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); display: block; }
-  .reach-card { border-radius: 20px; background-color: rgba(232,67,122,0.12) !important; background-image: linear-gradient(135deg, rgba(232,67,122,0.15) 0%, rgba(212,168,83,0.08) 100%) !important; border: 1px solid rgba(232,67,122,0.25); padding: 36px 40px; margin-bottom: 56px; text-align: center; }
-  .reach-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 68px; font-weight: 300; color: #f7c5d8; line-height: 1; display: block; }
-  .reach-big strong { font-weight: 600; color: #fff; }
-  .reach-sub { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-top: 8px; display: block; }
-  .section-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: #d4a853; text-align: center; margin-bottom: 28px; }
-  .packages { display: flex; flex-direction: column; gap: 14px; margin-bottom: 56px; }
-  .pkg { display: grid; grid-template-columns: 180px 1fr auto; align-items: center; gap: 24px; padding: 26px 30px; border-radius: 16px; border-left: 3px solid var(--bar-color); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); background-color: rgba(255,255,255,0.04) !important; position: relative; overflow: hidden; }
-  .pkg.featured { background-color: rgba(232,67,122,0.09) !important; background-image: linear-gradient(135deg, rgba(232,67,122,0.09) 0%, rgba(212,168,83,0.04) 100%) !important; border-top-color: rgba(232,67,122,0.2); border-right-color: rgba(232,67,122,0.2); border-bottom-color: rgba(232,67,122,0.2); }
-  .featured-badge { position: absolute; top: 12px; right: 16px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #d4a853; background-color: rgba(212,168,83,0.12) !important; border: 1px solid rgba(212,168,83,0.3); padding: 3px 10px; border-radius: 20px; }
-  .pkg-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--bar-color); opacity: 0.9; display: block; margin-bottom: 4px; }
-  .pkg-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; color: #fff; line-height: 1; display: block; }
-  .pkg-items { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
-  .pkg-items li { font-size: 12px; color: rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.07) !important; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.09); }
-  .pkg-price { text-align: right; white-space: nowrap; }
-  .pkg-amount { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 600; color: var(--bar-color); line-height: 1; display: block; }
-  .pkg-note { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 1px; margin-top: 4px; display: block; }
-  .terms { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 40px; margin-bottom: 48px; }
-  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
-  .term-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background-color: rgba(255,255,255,0.03) !important; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
-  .term-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-  .term-text { font-size: 12px; color: rgba(255,255,255,0.48); line-height: 1.6; }
-  .term-text strong { color: rgba(255,255,255,0.72); }
-  .footer { text-align: center; }
-  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.5); margin-bottom: 8px; display: block; }
-  .footer-contact { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.22); display: block; }
-  .footer-contact span { color: #e8437a; }
-  /* =========================
-   MOBILE RESPONSIVE FIXES
-========================= */
-@media (max-width: 768px) {
-
-  .wrap {
-    padding: 32px 18px 50px;
-  }
-
-  .hero {
-    margin-bottom: 36px;
-  }
-
-  .hero-name {
-    font-size: 52px;
-    line-height: 0.95;
-  }
-
-  .hero-handle {
-    font-size: 11px;
-    letter-spacing: 1px;
-    margin-bottom: 22px;
-  }
-
-  .eyebrow {
-    letter-spacing: 3px;
-    font-size: 10px;
-    text-align: center;
-  }
-
-  .left-line,
-  .right-line {
-    width: 70px;
-  }
-
-  /* Stats */
-  .stats-row {
-    grid-template-columns: 1fr;
-    gap: 1px;
-    margin-bottom: 32px;
-  }
-
-  .stat {
-    padding: 22px 14px;
-  }
-
-  .stat-number {
-    font-size: 34px;
-  }
-
-  /* Reach Card */
-  .reach-card {
-    padding: 26px 20px;
-    margin-bottom: 40px;
-  }
-
-  .reach-big {
-    font-size: 42px;
-    line-height: 1.1;
-  }
-
-  .reach-sub {
-    font-size: 10px;
-    letter-spacing: 2px;
-  }
-
-  /* Packages */
-  .packages {
-    gap: 16px;
-    margin-bottom: 40px;
-  }
-
-  .pkg {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 22px 20px;
-    text-align: left;
-  }
-
-  .pkg-price {
-    text-align: left;
-  }
-
-  .pkg-name {
-    font-size: 24px;
-  }
-
-  .pkg-items {
-    gap: 8px;
-  }
-
-  .pkg-items li {
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .pkg-amount {
-    font-size: 30px;
-  }
-
-  .featured-badge {
-    top: 10px;
-    right: 10px;
-    font-size: 8px;
-    letter-spacing: 2px;
-  }
-
-  /* Terms */
-  .terms {
-    padding-top: 30px;
-    margin-bottom: 36px;
-  }
-
-  .terms-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .term-item {
-    padding: 14px 15px;
-  }
-
-  .term-text {
-    font-size: 11px;
-  }
-
-  /* Footer */
-  .footer-name {
-    font-size: 24px;
-  }
-
-  .footer-contact {
-    font-size: 9px;
-    letter-spacing: 2px;
-    line-height: 1.7;
-  }
+* {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  margin: 0; padding: 0; box-sizing: border-box;
 }
-  @media print {
-    html, body { background-color: #1a0a12 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    body { background-image: radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,67,122,0.22) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 85% 80%, rgba(212,168,83,0.14) 0%, transparent 55%) !important; }
-  }
+:root {
+  --rose: #e8437a; --gold: #d4a853; --blush: #f7c5d8; --deep: #1a0a12;
+}
+html { background: #1a0a12; }
+body {
+  background-color: #1a0a12 !important;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,67,122,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 80%, rgba(212,168,83,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(232,67,122,0.07) 0%, transparent 70%) !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #fff; min-height: 100vh;
+}
+.wrap { max-width: 900px; margin: 0 auto; padding: 60px 40px 80px; }
+.hero { text-align: center; margin-bottom: 56px; }
+.eyebrow { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #d4a853; margin-bottom: 20px; opacity: 0.9; display: block; }
+.hero-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 80px; font-weight: 300; line-height: 1; color: #fff; margin-bottom: 8px; }
+.hero-name em { font-style: italic; color: #f7c5d8; }
+.hero-handle { font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-bottom: 32px; display: block; }
+.deco-line { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 40px; }
+.left-line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #e8437a); }
+.right-line { width: 120px; height: 1px; background: linear-gradient(90deg, #e8437a, transparent); }
+.deco-diamond { width: 8px; height: 8px; background: #e8437a; transform: rotate(45deg); flex-shrink: 0; }
+
+/* ── STATS ── */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 8px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+.stat { background-color: rgba(255,255,255,0.05) !important; padding: 28px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06); position: relative; }
+.stat:last-child { border-right: none; }
+.stat-number { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 600; color: #f7c5d8; line-height: 1; margin-bottom: 6px; display: block; transition: opacity 0.4s; }
+.stat-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); display: block; }
+
+/* live dot */
+.live-dot {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: #4caf50; margin-right: 5px; vertical-align: middle;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+.stats-meta {
+  text-align: center; font-size: 10px; letter-spacing: 2px;
+  color: rgba(255,255,255,0.22); margin-bottom: 40px; margin-top: 0;
+}
+.stats-meta.live { color: rgba(100,220,120,0.6); }
+.stats-meta.error { color: rgba(255,100,100,0.5); }
+
+/* loading shimmer */
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 4px;
+  display: inline-block;
+  width: 80px; height: 38px;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+.reach-card { border-radius: 20px; background-color: rgba(232,67,122,0.12) !important; background-image: linear-gradient(135deg, rgba(232,67,122,0.15) 0%, rgba(212,168,83,0.08) 100%) !important; border: 1px solid rgba(232,67,122,0.25); padding: 36px 40px; margin-bottom: 56px; text-align: center; }
+.reach-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 68px; font-weight: 300; color: #f7c5d8; line-height: 1; display: block; transition: opacity 0.4s; }
+.reach-big strong { font-weight: 600; color: #fff; }
+.reach-sub { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-top: 8px; display: block; }
+.section-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: #d4a853; text-align: center; margin-bottom: 28px; }
+.packages { display: flex; flex-direction: column; gap: 14px; margin-bottom: 56px; }
+.pkg { display: grid; grid-template-columns: 180px 1fr auto; align-items: center; gap: 24px; padding: 26px 30px; border-radius: 16px; border-left: 3px solid var(--bar-color); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); background-color: rgba(255,255,255,0.04) !important; position: relative; overflow: hidden; }
+.pkg.featured { background-color: rgba(232,67,122,0.09) !important; background-image: linear-gradient(135deg, rgba(232,67,122,0.09) 0%, rgba(212,168,83,0.04) 100%) !important; border-top-color: rgba(232,67,122,0.2); border-right-color: rgba(232,67,122,0.2); border-bottom-color: rgba(232,67,122,0.2); }
+.featured-badge { position: absolute; top: 12px; right: 16px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #d4a853; background-color: rgba(212,168,83,0.12) !important; border: 1px solid rgba(212,168,83,0.3); padding: 3px 10px; border-radius: 20px; }
+.pkg-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--bar-color); opacity: 0.9; display: block; margin-bottom: 4px; }
+.pkg-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; color: #fff; line-height: 1; display: block; }
+.pkg-items { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
+.pkg-items li { font-size: 12px; color: rgba(255,255,255,0.6); background-color: rgba(255,255,255,0.07) !important; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.09); }
+.pkg-price { text-align: right; white-space: nowrap; }
+.pkg-amount { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 600; color: var(--bar-color); line-height: 1; display: block; }
+.pkg-note { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 1px; margin-top: 4px; display: block; }
+.terms { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 40px; margin-bottom: 48px; }
+.terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+.term-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background-color: rgba(255,255,255,0.03) !important; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+.term-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.term-text { font-size: 12px; color: rgba(255,255,255,0.48); line-height: 1.6; }
+.term-text strong { color: rgba(255,255,255,0.72); }
+.footer { text-align: center; }
+.footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.5); margin-bottom: 8px; display: block; }
+.footer-contact { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.22); display: block; }
+.footer-contact span { color: #e8437a; }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .wrap { padding: 32px 18px 50px; }
+  .hero { margin-bottom: 36px; }
+  .hero-name { font-size: 52px; line-height: 0.95; }
+  .hero-handle { font-size: 11px; letter-spacing: 1px; margin-bottom: 22px; }
+  .eyebrow { letter-spacing: 3px; font-size: 10px; text-align: center; }
+  .left-line, .right-line { width: 70px; }
+  .stats-row { grid-template-columns: 1fr; gap: 1px; margin-bottom: 8px; }
+  .stat { padding: 22px 14px; }
+  .stat-number { font-size: 34px; }
+  .reach-card { padding: 26px 20px; margin-bottom: 40px; }
+  .reach-big { font-size: 42px; line-height: 1.1; }
+  .reach-sub { font-size: 10px; letter-spacing: 2px; }
+  .packages { gap: 16px; margin-bottom: 40px; }
+  .pkg { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; text-align: left; }
+  .pkg-price { text-align: left; }
+  .pkg-name { font-size: 24px; }
+  .pkg-items { gap: 8px; }
+  .pkg-items li { font-size: 11px; line-height: 1.4; }
+  .pkg-amount { font-size: 30px; }
+  .featured-badge { top: 10px; right: 10px; font-size: 8px; letter-spacing: 2px; }
+  .terms { padding-top: 30px; margin-bottom: 36px; }
+  .terms-grid { grid-template-columns: 1fr; }
+  .term-item { padding: 14px 15px; }
+  .term-text { font-size: 11px; }
+  .footer-name { font-size: 24px; }
+  .footer-contact { font-size: 9px; letter-spacing: 2px; line-height: 1.7; }
+}
+@media print {
+  html, body { background-color: #1a0a12 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background-image: radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,67,122,0.22) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 85% 80%, rgba(212,168,83,0.14) 0%, transparent 55%) !important; }
+}
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <div class="hero">
     <span class="eyebrow">Instagram · Brand Collaboration</span>
     <h1 class="hero-name"><em>Renu</em> Bisht</h1>
@@ -217,16 +142,32 @@
     <div class="deco-line"><div class="left-line"></div><div class="deco-diamond"></div><div class="right-line"></div></div>
     <span class="eyebrow" style="color:rgba(255,255,255,0.28);margin-bottom:0;">Official Media Kit &amp; Charges · 2025</span>
   </div>
+
+  <!-- STATS — ids used by JS to inject live data -->
   <div class="stats-row">
-    <div class="stat"><span class="stat-number">20.8K</span><span class="stat-label">Followers</span></div>
-    <div class="stat"><span class="stat-number">12.4M</span><span class="stat-label">Views · Last 30 Days</span></div>
-    <div class="stat"><span class="stat-number">4M+</span><span class="stat-label">Accounts Reached</span></div>
+    <div class="stat">
+      <span class="stat-number" id="stat-followers"><span class="shimmer"></span></span>
+      <span class="stat-label">Followers</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number" id="stat-views"><span class="shimmer"></span></span>
+      <span class="stat-label">Views · Last 30 Days</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number" id="stat-reach"><span class="shimmer"></span></span>
+      <span class="stat-label">Accounts Reached</span>
+    </div>
   </div>
+  <p class="stats-meta" id="stats-meta">Fetching live stats…</p>
+
+  <!-- REACH CARD — reach-views span updated by JS -->
   <div class="reach-card">
-    <span class="reach-big"><strong>12.4 Million</strong> views</span>
-    <span class="reach-sub">Organic reach in the last 30 days · Travel, Fashion &amp; Lifestyle</span>
+    <span class="reach-big" id="reach-headline"><strong id="reach-views"><span class="shimmer" style="height:56px;width:240px;"></span></strong></span>
+    <span class="reach-sub" id="reach-sub">Organic reach in the last 30 days · Travel, Fashion &amp; Lifestyle</span>
   </div>
+
   <p class="section-title">✦ &nbsp; Collaboration Packages &nbsp; ✦</p>
+
   <div class="packages">
     <div class="pkg" style="--bar-color:#b06090;">
       <div><span class="pkg-label">Tier 01</span><span class="pkg-name">Starter</span></div>
@@ -250,6 +191,7 @@
       <div class="pkg-price"><span class="pkg-amount">₹5,000+</span><span class="pkg-note">full package</span></div>
     </div>
   </div>
+
   <div class="terms">
     <p class="section-title" style="text-align:left;margin-bottom:0;">✦ &nbsp; Terms &amp; Notes</p>
     <div class="terms-grid">
@@ -261,11 +203,104 @@
       <div class="term-item"><span class="term-icon">✍️</span><span class="term-text">All packages include <strong>content creation, editing</strong>, and caption writing.</span></div>
     </div>
   </div>
+
   <div class="footer">
     <div class="deco-line" style="margin-bottom:28px;"><div class="left-line"></div><div class="deco-diamond"></div><div class="right-line"></div></div>
     <span class="footer-name">Renu Bisht</span>
     <span class="footer-contact">Collaborations via Instagram DM &nbsp;·&nbsp; <span>@renu__bisht_</span></span>
   </div>
+
 </div>
+
+<script>
+// ─────────────────────────────────────────────────
+//  INSTAGRAM LIVE STATS
+//  Replace YOUR_ACCESS_TOKEN_HERE with your token
+//  from Meta Graph Explorer once you have it.
+// ─────────────────────────────────────────────────
+const ACCESS_TOKEN = 'EAAbVqF5hrOMBRvjWtvpvmC0jxGOt7pEfCACVIcB2rM02KSaLJKZBmHZCW2tntYDhZBiozX5EEl7OKKEmr94gBm1A87ZB7qkBCVAbEfW78ow8bpxg023drSErNXUqWnCpSmEgbKIDmSuJGjZBZAYaAahUSYWBkRPz7M0NLuOZCIqB0coJZBDmPi55a1EuCu7bYUmq4D8XBTLyo8DKrlVR3EvjgvWl0MhWtz3kCbSXylfZBodckY35eKpRne8cuEShZBNDb8F1oUCLo0BMZBDl4yhJjpznt24';
+
+// Fallback numbers shown if API is not yet configured or fails
+const FALLBACK = {
+  followers: '20.8K',
+  views:     '12.4M',
+  reach:     '4M+'
+};
+
+function formatNumber(n) {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (n >= 1_000)     return (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return n.toLocaleString('en-IN');
+}
+
+function showFallback(reason) {
+  document.getElementById('stat-followers').textContent = FALLBACK.followers;
+  document.getElementById('stat-views').textContent     = FALLBACK.views;
+  document.getElementById('stat-reach').textContent     = FALLBACK.reach;
+  document.getElementById('reach-views').textContent    = FALLBACK.views + ' views';
+
+  const meta = document.getElementById('stats-meta');
+  meta.className = 'stats-meta error';
+  meta.textContent = reason || 'Using saved stats — token not yet configured';
+}
+
+async function fetchInstagramStats() {
+  // Don't call the API until a real token is added
+  if (!ACCESS_TOKEN || ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN_HERE') {
+    showFallback('Add your API token to see live stats');
+    return;
+  }
+
+  try {
+    // Step 1: get Instagram Business Account ID linked to the page
+    const pageRes = await fetch(
+      `https://graph.facebook.com/v19.0/me?fields=instagram_business_account&access_token=${ACCESS_TOKEN}`
+    );
+    const pageData = await pageRes.json();
+    if (!pageData.instagram_business_account) throw new Error('No Instagram Business Account linked');
+
+    const igId = pageData.instagram_business_account.id;
+
+    // Step 2: fetch followers count + basic profile
+    const profileRes = await fetch(
+      `https://graph.facebook.com/v19.0/${igId}?fields=followers_count&access_token=${ACCESS_TOKEN}`
+    );
+    const profile = await profileRes.json();
+    if (profile.error) throw new Error(profile.error.message);
+
+    // Step 3: fetch 30-day impressions + reach from insights
+    const insightsRes = await fetch(
+      `https://graph.facebook.com/v19.0/${igId}/insights?metric=impressions,reach&period=days_28&access_token=${ACCESS_TOKEN}`
+    );
+    const insights = await insightsRes.json();
+    if (insights.error) throw new Error(insights.error.message);
+
+    const impressionsObj = insights.data?.find(d => d.name === 'impressions');
+    const reachObj       = insights.data?.find(d => d.name === 'reach');
+
+    const followers  = profile.followers_count;
+    const views      = impressionsObj?.values?.slice(-1)[0]?.value ?? null;
+    const reach      = reachObj?.values?.slice(-1)[0]?.value      ?? null;
+
+    // Update DOM
+    document.getElementById('stat-followers').textContent = formatNumber(followers);
+    document.getElementById('stat-views').textContent     = views  ? formatNumber(views)  : FALLBACK.views;
+    document.getElementById('stat-reach').textContent     = reach  ? formatNumber(reach)  : FALLBACK.reach;
+    document.getElementById('reach-views').textContent    = (views ? formatNumber(views) : FALLBACK.views) + ' views';
+
+    const now = new Date().toLocaleString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' });
+    const meta = document.getElementById('stats-meta');
+    meta.className = 'stats-meta live';
+    meta.innerHTML = `<span class="live-dot"></span>Live data · Updated ${now}`;
+
+  } catch (err) {
+    console.warn('Instagram API error:', err.message);
+    showFallback('Live fetch failed — showing saved stats');
+  }
+}
+
+// Run on page load
+fetchInstagramStats();
+</script>
 </body>
 </html>
