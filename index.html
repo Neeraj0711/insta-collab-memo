@@ -12,9 +12,7 @@
   color-adjust: exact !important;
   margin: 0; padding: 0; box-sizing: border-box;
 }
-:root {
-  --rose: #e8437a; --gold: #d4a853; --blush: #f7c5d8; --deep: #1a0a12;
-}
+:root { --rose: #e8437a; --gold: #d4a853; --blush: #f7c5d8; --deep: #1a0a12; }
 html { background: #1a0a12; }
 body {
   background-color: #1a0a12 !important;
@@ -35,43 +33,20 @@ body {
 .left-line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #e8437a); }
 .right-line { width: 120px; height: 1px; background: linear-gradient(90deg, #e8437a, transparent); }
 .deco-diamond { width: 8px; height: 8px; background: #e8437a; transform: rotate(45deg); flex-shrink: 0; }
-
-/* ── STATS ── */
 .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 8px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
-.stat { background-color: rgba(255,255,255,0.05) !important; padding: 28px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06); position: relative; }
+.stat { background-color: rgba(255,255,255,0.05) !important; padding: 28px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.06); }
 .stat:last-child { border-right: none; }
 .stat-number { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 600; color: #f7c5d8; line-height: 1; margin-bottom: 6px; display: block; transition: opacity 0.4s; }
 .stat-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); display: block; }
-
-/* live dot */
-.live-dot {
-  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-  background: #4caf50; margin-right: 5px; vertical-align: middle;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
-}
-.stats-meta {
-  text-align: center; font-size: 10px; letter-spacing: 2px;
-  color: rgba(255,255,255,0.22); margin-bottom: 40px; margin-top: 0;
-}
+.live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #4caf50; margin-right: 5px; vertical-align: middle; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.stats-meta { text-align: center; font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.22); margin-bottom: 40px; }
 .stats-meta.live { color: rgba(100,220,120,0.6); }
-.stats-meta.error { color: rgba(255,100,100,0.5); }
-
-/* loading shimmer */
-.shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.05) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.2s infinite;
-  border-radius: 4px;
-  display: inline-block;
-  width: 80px; height: 38px;
-}
+.stats-meta.error { color: rgba(255,140,100,0.6); }
+.shimmer { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 4px; display: inline-block; width: 80px; height: 38px; }
 @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
 .reach-card { border-radius: 20px; background-color: rgba(232,67,122,0.12) !important; background-image: linear-gradient(135deg, rgba(232,67,122,0.15) 0%, rgba(212,168,83,0.08) 100%) !important; border: 1px solid rgba(232,67,122,0.25); padding: 36px 40px; margin-bottom: 56px; text-align: center; }
-.reach-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 68px; font-weight: 300; color: #f7c5d8; line-height: 1; display: block; transition: opacity 0.4s; }
+.reach-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 68px; font-weight: 300; color: #f7c5d8; line-height: 1; display: block; }
 .reach-big strong { font-weight: 600; color: #fff; }
 .reach-sub { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-top: 8px; display: block; }
 .section-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: #d4a853; text-align: center; margin-bottom: 28px; }
@@ -96,14 +71,12 @@ body {
 .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.5); margin-bottom: 8px; display: block; }
 .footer-contact { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.22); display: block; }
 .footer-contact span { color: #e8437a; }
-
-/* ── MOBILE ── */
 @media (max-width: 768px) {
   .wrap { padding: 32px 18px 50px; }
   .hero { margin-bottom: 36px; }
   .hero-name { font-size: 52px; line-height: 0.95; }
   .hero-handle { font-size: 11px; letter-spacing: 1px; margin-bottom: 22px; }
-  .eyebrow { letter-spacing: 3px; font-size: 10px; text-align: center; }
+  .eyebrow { letter-spacing: 3px; font-size: 10px; }
   .left-line, .right-line { width: 70px; }
   .stats-row { grid-template-columns: 1fr; gap: 1px; margin-bottom: 8px; }
   .stat { padding: 22px 14px; }
@@ -112,13 +85,12 @@ body {
   .reach-big { font-size: 42px; line-height: 1.1; }
   .reach-sub { font-size: 10px; letter-spacing: 2px; }
   .packages { gap: 16px; margin-bottom: 40px; }
-  .pkg { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; text-align: left; }
+  .pkg { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; }
   .pkg-price { text-align: left; }
   .pkg-name { font-size: 24px; }
-  .pkg-items { gap: 8px; }
-  .pkg-items li { font-size: 11px; line-height: 1.4; }
+  .pkg-items li { font-size: 11px; }
   .pkg-amount { font-size: 30px; }
-  .featured-badge { top: 10px; right: 10px; font-size: 8px; letter-spacing: 2px; }
+  .featured-badge { top: 10px; right: 10px; font-size: 8px; }
   .terms { padding-top: 30px; margin-bottom: 36px; }
   .terms-grid { grid-template-columns: 1fr; }
   .term-item { padding: 14px 15px; }
@@ -143,7 +115,6 @@ body {
     <span class="eyebrow" style="color:rgba(255,255,255,0.28);margin-bottom:0;">Official Media Kit &amp; Charges · 2025</span>
   </div>
 
-  <!-- STATS — ids used by JS to inject live data -->
   <div class="stats-row">
     <div class="stat">
       <span class="stat-number" id="stat-followers"><span class="shimmer"></span></span>
@@ -160,10 +131,9 @@ body {
   </div>
   <p class="stats-meta" id="stats-meta">Fetching live stats…</p>
 
-  <!-- REACH CARD — reach-views span updated by JS -->
   <div class="reach-card">
-    <span class="reach-big" id="reach-headline"><strong id="reach-views"><span class="shimmer" style="height:56px;width:240px;"></span></strong></span>
-    <span class="reach-sub" id="reach-sub">Organic reach in the last 30 days · Travel, Fashion &amp; Lifestyle</span>
+    <span class="reach-big"><strong id="reach-views"><span class="shimmer" style="height:56px;width:240px;"></span></strong> views</span>
+    <span class="reach-sub">Organic reach in the last 30 days · Travel, Fashion &amp; Lifestyle</span>
   </div>
 
   <p class="section-title">✦ &nbsp; Collaboration Packages &nbsp; ✦</p>
@@ -211,96 +181,59 @@ body {
   </div>
 
 </div>
-
 <script>
-// ─────────────────────────────────────────────────
-//  INSTAGRAM LIVE STATS
-//  Replace YOUR_ACCESS_TOKEN_HERE with your token
-//  from Meta Graph Explorer once you have it.
-// ─────────────────────────────────────────────────
-const ACCESS_TOKEN = 'EAAbVqF5hrOMBRvjWtvpvmC0jxGOt7pEfCACVIcB2rM02KSaLJKZBmHZCW2tntYDhZBiozX5EEl7OKKEmr94gBm1A87ZB7qkBCVAbEfW78ow8bpxg023drSErNXUqWnCpSmEgbKIDmSuJGjZBZAYaAahUSYWBkRPz7M0NLuOZCIqB0coJZBDmPi55a1EuCu7bYUmq4D8XBTLyo8DKrlVR3EvjgvWl0MhWtz3kCbSXylfZBodckY35eKpRne8cuEShZBNDb8F1oUCLo0BMZBDl4yhJjpznt24';
+// ─────────────────────────────────────────────────────────────
+//  STEP: After deploying your Cloudflare Worker, paste its
+//  URL below. It will look like:
+//  https://ig-stats.YOUR-NAME.workers.dev
+// ─────────────────────────────────────────────────────────────
+const WORKER_URL = 'YOUR_WORKER_URL_HERE';
 
-// Fallback numbers shown if API is not yet configured or fails
-const FALLBACK = {
-  followers: '20.8K',
-  views:     '12.4M',
-  reach:     '4M+'
-};
+const FALLBACK = { followers: '20.8K', views: '12.4M', reach: '4M+' };
 
-function formatNumber(n) {
+function fmt(n) {
+  if (!n) return null;
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
   if (n >= 1_000)     return (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
   return n.toLocaleString('en-IN');
 }
 
-function showFallback(reason) {
+function showFallback(msg) {
   document.getElementById('stat-followers').textContent = FALLBACK.followers;
   document.getElementById('stat-views').textContent     = FALLBACK.views;
   document.getElementById('stat-reach').textContent     = FALLBACK.reach;
-  document.getElementById('reach-views').textContent    = FALLBACK.views + ' views';
-
+  document.getElementById('reach-views').textContent    = FALLBACK.views;
   const meta = document.getElementById('stats-meta');
   meta.className = 'stats-meta error';
-  meta.textContent = reason || 'Using saved stats — token not yet configured';
+  meta.textContent = msg;
 }
 
-async function fetchInstagramStats() {
-  // Don't call the API until a real token is added
-  if (!ACCESS_TOKEN || ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN_HERE') {
-    showFallback('Add your API token to see live stats');
+async function fetchStats() {
+  if (!WORKER_URL || WORKER_URL === 'https://spring-lake-18ea.neerajmehta60.workers.dev/') {
+    showFallback('Deploy the Worker and paste its URL to go live');
     return;
   }
-
   try {
-    // Step 1: get Instagram Business Account ID linked to the page
-    const pageRes = await fetch(
-      `https://graph.facebook.com/v19.0/me?fields=instagram_business_account&access_token=${ACCESS_TOKEN}`
-    );
-    const pageData = await pageRes.json();
-    if (!pageData.instagram_business_account) throw new Error('No Instagram Business Account linked');
+    const res  = await fetch(WORKER_URL);
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
 
-    const igId = pageData.instagram_business_account.id;
-
-    // Step 2: fetch followers count + basic profile
-    const profileRes = await fetch(
-      `https://graph.facebook.com/v19.0/${igId}?fields=followers_count&access_token=${ACCESS_TOKEN}`
-    );
-    const profile = await profileRes.json();
-    if (profile.error) throw new Error(profile.error.message);
-
-    // Step 3: fetch 30-day impressions + reach from insights
-    const insightsRes = await fetch(
-      `https://graph.facebook.com/v19.0/${igId}/insights?metric=impressions,reach&period=days_28&access_token=${ACCESS_TOKEN}`
-    );
-    const insights = await insightsRes.json();
-    if (insights.error) throw new Error(insights.error.message);
-
-    const impressionsObj = insights.data?.find(d => d.name === 'impressions');
-    const reachObj       = insights.data?.find(d => d.name === 'reach');
-
-    const followers  = profile.followers_count;
-    const views      = impressionsObj?.values?.slice(-1)[0]?.value ?? null;
-    const reach      = reachObj?.values?.slice(-1)[0]?.value      ?? null;
-
-    // Update DOM
-    document.getElementById('stat-followers').textContent = formatNumber(followers);
-    document.getElementById('stat-views').textContent     = views  ? formatNumber(views)  : FALLBACK.views;
-    document.getElementById('stat-reach').textContent     = reach  ? formatNumber(reach)  : FALLBACK.reach;
-    document.getElementById('reach-views').textContent    = (views ? formatNumber(views) : FALLBACK.views) + ' views';
+    document.getElementById('stat-followers').textContent = fmt(data.followers) ?? FALLBACK.followers;
+    document.getElementById('stat-views').textContent     = fmt(data.views)     ?? FALLBACK.views;
+    document.getElementById('stat-reach').textContent     = fmt(data.reach)     ?? FALLBACK.reach;
+    document.getElementById('reach-views').textContent    = fmt(data.views)     ?? FALLBACK.views;
 
     const now = new Date().toLocaleString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' });
     const meta = document.getElementById('stats-meta');
     meta.className = 'stats-meta live';
-    meta.innerHTML = `<span class="live-dot"></span>Live data · Updated ${now}`;
-
+    meta.innerHTML = '<span class="live-dot"></span>Live data · Updated ' + now;
   } catch (err) {
-    console.warn('Instagram API error:', err.message);
+    console.warn('Stats fetch failed:', err.message);
     showFallback('Live fetch failed — showing saved stats');
   }
 }
 
-// Run on page load
-fetchInstagramStats();
+fetchStats();
 </script>
 </body>
 </html>
